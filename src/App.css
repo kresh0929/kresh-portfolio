@@ -1,0 +1,960 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000813;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h3 a {
+  text-decoration: none;
+}
+
+hr {
+  border: solid 0.2px #118ab2;
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  color: #000813;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.phoneHide {
+  display: block;
+}
+
+.laptopHide {
+  display: none;
+}
+
+.mainSectionHeading{
+  padding-bottom: 20px;
+}
+
+.mainSectionHeading h3 span,
+.mainSectionHeading h3 {
+  font-size: 40px;
+}
+
+.mainSectionHeading h3 span {
+  color: #118ab2;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+@media (min-width: 150px) and (max-width: 600px) {
+  hr {
+    display: none;
+  }
+
+  .mainSectionHeading h3 span,
+  .mainSectionHeading h3 {
+    font-size: 30px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Header & Navigation section */
+
+header {
+  position: fixed;
+  top: 0;
+  background-color: #000813cb;
+  backdrop-filter: blur(10px);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  z-index: 1000;
+}
+
+.LogoBox {
+  margin: 30px 0px 0 20px;
+}
+
+.LogoBox img {
+  height: "60px";
+  width: "auto";
+}
+
+header .navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+header .navbar ul li a {
+  font-size: 17px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar a.active {
+  border-radius: 0;
+  border-bottom: solid #118ab2 1px;
+  color: #118ab2;
+}
+
+header label {
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.closeIcon,
+.menuIcon {
+  display: none;
+}
+
+@media (min-width: 150px) and (max-width: 900px) {
+  header {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+  }
+
+  .LogoBox {
+    margin: 20px 0px 0 10px;
+  }
+
+  .LogoBox img {
+    height: 42px;
+  }
+
+  .navbar {
+    background-color: #000813;
+    min-width: 100vw;
+    padding-top: 300px;
+    color: #fff;
+    display: none;
+  }
+
+  .showNavbar {
+    display: block;
+    transform: translateY(0);
+  }
+
+  .hideNavbar {
+    display: none;
+    transform: translateY(-100%);
+  }
+
+  .menuIcon {
+    width: 10%;
+    font-size: 25px;
+  }
+
+  .closeIcon,
+  .menuIcon {
+    display: block;
+  }
+
+  .closeIcon i {
+    font-size: 32px;
+  }
+
+  header .navbar ul {
+    padding-top: 50px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    height: 150vh;
+    margin: auto;
+    align-items: center;
+  }
+
+  li a {
+    font-size: 20px !important;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+/* Hero section css start */
+
+.HeroSection,
+.aboutSection {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.HeroLeft,
+.HeroRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeroLeft {
+  width: 60vw;
+}
+
+.HeroRight {
+  width: 50vw;
+  max-height: 90vh;
+}
+
+.HeroLeftContentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 40vw;
+}
+
+.HeroHeading {
+  font-size: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.proffession {
+  color: #118ab2;
+  max-width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #212121;
+  animation: cursor 2s step-start infinite, text 5s steps(30) infinite;
+}
+
+@keyframes cursor {
+  0%, 100% {
+    border-color: #118ab2;
+  }
+}
+
+@keyframes text {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 22ch; 
+  }
+}
+
+
+.HeroParagraph {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.socialmediaIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.socialMediaIcon {
+  padding: 12px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  border-radius: 50px;
+  border: #fff 1px solid;
+}
+
+.socialMediaIcon:hover {
+  padding: 12px;
+  border: #118ab2 1px solid;
+  box-shadow: 0 0 15px #118ab2;
+  transform: scale(1.05);
+}
+
+.HeroBtn button {
+  height: 55px;
+  width: 180px;
+  border-radius: 15px;
+  border: solid #fff 1px;
+  font-size: 18px;
+  background-color: #000813;
+}
+
+.HeroSectionImage {
+  overflow: hidden;
+  height: 30vw;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 150px) and (max-width: 700px) {
+  .HeroSection,
+  .contactContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .HeroSection {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    gap: 100px;
+  }
+
+  .HeroLeft {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .HeroHeading {
+    font-size: 32px;
+  }
+
+  .HeroLeftContentContainer {
+    width: 100%;
+    padding-top: 25px;
+    gap: 35px;
+  }
+
+  .HeroRight {
+    width: 100%;
+  }
+
+  .HeroSectionImage {
+    width: 60vw;
+    height: auto;
+  }
+}
+
+@media (min-width: 150px) and (max-width: 400px) {
+  .HeroLeft {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .HeroSectionImage {
+    width: 100vw;
+    height: auto;
+  }
+
+  .HeroSectionImage img {
+    width: 90vw;
+  }
+
+  .HeroParagraph {
+    font-size: 16px;
+  }
+}
+
+/* Hero section css end */
+
+/* About section css start */
+
+
+.aboutInfoContainer {
+  display: flex;
+}
+
+.aboutInfoBoxes {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.aboutInfoBox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 8vmin;
+}
+
+.aboutInfoLeftBox {
+  /* height: 8vmin; */
+  height: 100%;
+}
+
+.AboutInfoImg {
+  height: 100%;
+  display: flex;
+  align-items: end;
+  width: fit-content;
+}
+
+.AboutInfoImg i {
+  font-size: 50px;
+}
+
+.aboutInfoRightBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  /* height: 8vmin; */
+}
+
+.aboutInfoRightBox h3 {
+  font-size: 28px;
+  color: #118ab2;
+}
+
+.aboutInfoRightBox p {
+  font-size: 17px;
+}
+
+.AboutInfoImg {
+  height: 100%;
+  width: fit-content;
+}
+
+.HeroParagraph{
+  margin-right: 150px;
+  padding-bottom: 25px;
+}
+
+@media (min-width: 150px) and (max-width: 700px) {
+  .AboutInfoImg i {
+    font-size: 50px;
+  }
+
+  .aboutInfoContainer {
+    flex-direction: column;
+  }
+
+  .aboutInfoBox {
+    min-width: 80vw;
+    min-height: 60px;
+    /* background-color: aquamarine; */
+  }
+
+  .aboutSection {
+    padding: 0;
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding-bottom: 80px;
+    padding-top: 20px;
+  }
+
+  .aboutInfoContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutInfoBoxes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+    /* min-height: 200px; */
+  }
+
+  .aboutInfoBox {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .aboutInfoRightBox h3 {
+    font-size: 25px;
+    color: #118ab2;
+  }
+
+  .aboutLeftContentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* padding: 30px; */
+    gap: 25px;
+  }
+
+  .HeroParagraph{
+    margin-right: 0px;
+  }
+
+}
+
+/* skill section css start */
+
+
+
+/* skill section css end */
+
+/* service section css start */
+
+.ServicesSection {
+  padding: 0 10vmin;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.serviceUpperContainer div {
+  text-align: left;
+}
+
+.servicesParagraph {
+  width: 40%;
+}
+
+.serviceCards {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.serviceCard {
+  background-color: transparent;
+  border-radius: 20px;
+  height: 300px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  padding: 15px;
+  text-align: center;
+  background-color: transparent;
+  border: solid 0.02px #118ab2;
+}
+
+.serviceCard:hover {
+  background-color: transparent;
+  box-shadow: 0 0 10px #118ab2;
+  transform: scale(1.02);
+}
+
+.serviceCardtop i {
+  background-color: transparent;
+  font-size: 50px;
+}
+
+.serviceCardMid {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.serviceCardBottom {
+  font-size: 15px;
+}
+
+@media (min-width: 150px) and (max-width: 700px) {
+  .ServicesSection {
+    padding: 20px;
+  }
+  .servicesParagraph {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .serviceCard {
+    padding: 25px;
+    border-radius: 10px;
+  }
+
+  .serviceCardMid {
+    font-weight: 700;
+    font-size: 25px;
+  }
+}
+
+/* service section css end */
+
+/* Project section css end */
+
+.ProjectSection {
+  padding-top: 100px;
+}
+
+.projectContainer{
+  max-width: 95vw;
+  margin: auto;
+}
+
+.sec2Btns {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 7vmin;
+  margin-bottom: 5vmin;
+}
+
+.sec2Btn {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sec2Btn {
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.sec2Btn.active {
+  color: #118ab2;
+  border-bottom: solid 1px #118ab2;
+}
+
+.serviceLowerContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.ProjectSlideIconBox {
+  height: 100px;
+}
+
+.ProjectSlideIcon {
+  display: flex;
+  gap: 20px;
+  float: left;
+}
+
+.ProjectSlideIcon span {
+  height: 40px;
+  width: 40px;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: solid #118ab2 0.2px; */
+  font-size: 35px;
+  margin: 50px;
+  cursor: pointer;
+}
+
+.projectCards {
+  display: flex;
+  gap: 5vmin;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+}
+
+.projectCard {
+  height: 420px;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 20px;
+  border: solid #118ab2 0.2px;
+}
+
+.projectCardtop {
+  min-height: 50%;
+  width: 100%;
+  border-radius: 20px;
+  /* border: solid #118ab2 2px; */
+}
+
+.ProjectImage {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ProjectImage img {
+  border-radius: 20px;
+}
+
+.projectCardMid {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ProjectHeading {
+  font-size: 22px;
+  color: #118ab2;
+}
+
+.ProjectParagraph {
+  font-size: 13px;
+  font-weight: 300;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.projectCardBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectCardBottom button {
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  border: none;
+  border: solid #118ab2 0.2px;
+}
+
+.projectLeftBtn {
+  background-color: #118ab2;
+}
+
+.projectRightBtn {
+  background-color: transparent;
+}
+
+.seeMore {
+  /* height: 30px; */
+  width: 180px;
+  margin: auto;
+  text-align: center;
+  background-color: #118ab2;
+  border-radius: 20px;
+  padding: 8px;
+  margin-top: 50px;
+}
+
+/* .usedSkills{
+  display: flex;
+  gap: 10px;
+}
+.usedskill{
+  padding: 1px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px #118ab2;
+  border: solid #ddddddca 1px;
+} 
+*/
+
+@media (min-width: 150px) and (max-width: 700px) {
+  .phoneHide {
+    display: none;
+  }
+
+.sec2Btns {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  margin-top: 7vmin;
+  margin-bottom: 5vmin;
+}
+
+.sec2Btn {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.sec2Btn {
+  padding: 5px 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+  .laptopHide {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:8px;
+  }
+
+  .projectCards,
+  .serviceCards {
+    flex-direction: column;
+    margin: auto;
+    gap: 50px;
+  }
+
+  .projectCards {
+    padding: 0px 10px;
+  }
+
+  .projectCard,
+  .serviceCard {
+    width: 100%;
+  }
+
+  .ProjectParagraph {
+    -webkit-line-clamp: 5;
+  }
+
+  .projectCard {
+    gap: 15px;
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .ProjectImage img {
+    border-radius: 12px;
+  }
+
+  .projectCardBottom{
+    gap: 20px;
+  }
+
+  .projectCardBottom button {
+    height: 40px;
+    width: 150px;
+    border-radius: 12px;
+  }
+}
+
+/* Contact us section css start */
+
+.contactSection {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contactContainer {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ContactLeftContentContainer {
+  width: 40vw;
+}
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.NameMailBox {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.UserInfo {
+  width: 50%;
+}
+
+.UserInfo input {
+  width: 100%;
+}
+
+input {
+  height: 40px;
+  background-color: transparent;
+  border: solid 1px #118ab2;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.ContactInputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message textarea {
+  width: 100%;
+  height: 200px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: solid 1px #118ab2;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+.ContactSubmit button {
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #118ab2;
+}
+
+@media (min-width: 150px) and (max-width: 700px) {
+  .contactContainer {
+    height: auto;
+  }
+
+  .contactSection{
+    padding-bottom: 30px;
+  }
+
+  .ContactRight,
+  .ContactLeft {
+    width: 100%;
+    margin: auto;
+  }
+
+  .HeroSectionImage,
+  .ContactLeftContentContainer {
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ContactForm {
+    width: 90vw;
+  }
+
+  .NameMailBox {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .UserInfo {
+    width: 100%;
+  }
+}
+
+/* Footer section */
+
+footer {
+  padding: 3% 20%;
+  color: white;
+  text-align: center;
+  border: solid 0.5px #011531;
+}
+
+footer h3 {
+  font-size: 17px;
+  font-weight: lighter;
+}
